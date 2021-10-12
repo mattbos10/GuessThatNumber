@@ -85,5 +85,22 @@ while (restartGame) {
         }
     }
 
-    break;
+    // Prompts user with option to play again
+    playAgain = prompt(`Would you like to play again? Y for yes. N for no.`)
+
+    // Loop continues until user submits a valid response
+    while(true) {
+        // Checks if user does not want to play again (AKA: N or n)
+        if (playAgain === "N" || playAgain === "n") {
+            //  Alerts the user that the game/loop does NOT restart
+            alert(`Thanks for playing!`);  
+            restartGame = false;   
+            break;
+
+            // checks if the user response is yes (AKA: Y or y)
+        } else if (playAgain === "Y" || playAgain === "n") {
+            // game restarts if user says Y or y
+            break;
+        }
+    }
 }
